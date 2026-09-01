@@ -49,6 +49,7 @@ func main() {
 	//rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	rootCmd.AddCommand(Cmd())
+	rootCmd.AddCommand(Update())
 
 	ctx := context.Background()
 

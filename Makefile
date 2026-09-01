@@ -1,5 +1,5 @@
-whoisx: go.* *.go
-	go build -v
+whoisx: go.* *.go */*/*.go
+	go build -v ./cmd/whoisx
 
 .PHONY: clean
 clean:
