@@ -4,6 +4,7 @@ whoisx: go.* *.go */*/*.go
 .PHONY: clean
 clean:
 	rm -rf dist
+	rm -f whoisx
 
 .PHONY: lint
 lint: whoisx
