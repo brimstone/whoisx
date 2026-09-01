@@ -19,13 +19,12 @@ import (
 // rootCmd represents the base command when called without any subcommands.
 var rootCmd = &cobra.Command{
 	Use:   "whoisx",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "Look up owner info for IPv4 and IPv6 addresses",
+	Long: `whoisx queries the appropriate RIR whois server (ARIN, RIPE, APNIC,
+AFRINIC, LACNIC) for an IP address, recursing to the correct registry,
+and prints the result as JSON.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+IP addresses are read from stdin, one per line.`,
 }
 
 func main() {

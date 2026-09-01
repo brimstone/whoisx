@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Matt Robinson brimstone@the.narro.ws
+
 package main
 
 import (
@@ -15,7 +17,7 @@ import (
 )
 
 func PublicKey() (*ecdsa.PublicKey, error) {
-		block, _ := pem.Decode([]byte(`
+	block, _ := pem.Decode([]byte(`
 -----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEV+xkT70NtOJJRIOfnMw/KAFBIzCw
 EPrC6Nz3G8+OEjZUTNMiB/Q598rCaGPtaKYnU6WE4tG6GrH7tVBcubUdfA==
@@ -69,7 +71,6 @@ Download it if available and replace the current executable.`,
 			}
 
 			latest, err := up.UpdateSelf(v, "brimstone/whoisx")
-
 			if err != nil {
 				return fmt.Errorf("binary update failed: %w", err)
 			}
